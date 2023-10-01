@@ -68,8 +68,8 @@ Results
 > ```
 
 - `cmake_minimum(VERSION xxxxx)` is required
-- `project(xxx)` : Add project
-- `add_executable(xxxx source)` : Build the executable file
+- `project(projectName)` : Add project
+- `add_executable(programName source)` : Build the executable file
 
 Results
 
@@ -82,7 +82,15 @@ Results
 # Example 2 : 
 ## Step 0 : Prepare _main.cpp_
 ## Step 1 : Create _CMakeLists.txt_ and run `cmake`
-- Empty CMakeLists.txt
+> CMakeLists.txt
+> ```
+> cmake_minimum_required(VERSION 3.16.3)
+> project(Trim)
+> add_executable(trim main.cpp)
+> install(TARGETS trim DESTINATION bin)
+> ```
+
+- `install(TARGETS programName DESTINATION xxx)` : specify where to install the executable file (your program), _bin_ is a standard place to install (usually _usr/local/bin/_)
 - Usually, we create a separate folder for the built files (in this case, _build_)
 > Linux terminal
 > ```
@@ -92,10 +100,14 @@ Results
 
 ![image](https://github.com/komxun/CMake_Learn/assets/133139057/a272dd15-1615-472c-bc6a-715ae9e2d8e1)
 
-- Now, many files are created in _build_, including the _makefile_
+- Now, in _build_, the _makefile_ is created and configured along with many other files
 ![image](https://github.com/komxun/CMake_Learn/assets/133139057/78b757e8-cc72-4d4f-9404-26a04be2fd80)
 
+## Step 2 : run `make` and your program
+![image](https://github.com/komxun/CMake_Learn/assets/133139057/0910e4ff-34d9-438e-bb6f-658bf3c34f3f)
 
 
+Not sure what to `make`? type `make help`
+![image](https://github.com/komxun/CMake_Learn/assets/133139057/e21a02a5-1b42-4679-ac1c-ec8f100eb8b5)
 
 
