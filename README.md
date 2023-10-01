@@ -79,6 +79,23 @@ Results
 
 ![image](https://github.com/komxun/CMake_Learn/assets/133139057/02e7fa9d-0b5a-47b3-9390-09d6e52a5e12)
 
+# Example 2 : 
+## Step 0 : Prepare _main.cpp_
+## Step 1 : Create _CMakeLists.txt_ and run `cmake`
+- Empty CMakeLists.txt
+- Usually, we create a separate folder for the built files (in this case, _build_)
+> Linux terminal
+> ```
+> cmake -S ..
+> ```
+- `-S ..` means the source (and CMakeLists.txt) is in the previous directory
+
+![image](https://github.com/komxun/CMake_Learn/assets/133139057/a272dd15-1615-472c-bc6a-715ae9e2d8e1)
+
+- Now, many files are created in _build_, including the _makefile_
+![image](https://github.com/komxun/CMake_Learn/assets/133139057/78b757e8-cc72-4d4f-9404-26a04be2fd80)
+
+
 
 
 
