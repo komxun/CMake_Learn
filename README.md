@@ -36,3 +36,19 @@ make
 ```cpp
 cmake -S <path-to-source> -B <path-to-build>
 ```
+Example
+> Linux terminal
+```
+cmake -S src/ -B obj/
+```
+## Check CMake version
+
+```
+cmake_minimum_required(VERSION 3.16.3)
+
+
+```
+> Linux terminal
+```
+cmake --version
+```
