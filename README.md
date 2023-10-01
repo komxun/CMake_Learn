@@ -34,6 +34,12 @@ Results
 # CMakeLists.txt
 - CMake relies on a top-level file called `CMakeLists.txt' (exact spelling!)
 
+Project Workflow \
+Step 1: Prepare your source file `main.cpp` \
+Step 2: Create _CMakeLists.txt_, a separate folder for built files, and run `cmake` \
+Step 3: Run `make` 
+
+## `cmake`
 **2 Important points in CMakeList**
 - Where your source file is (contain _CMakeLists.txt_)
 - Where your build folder is
@@ -41,47 +47,60 @@ Results
 > ```cpp
 > cmake -S <path-to-source> -B <path-to-build>
 > ```
-
-# Example 
+ Ex:
 > Linux terminal
+> ```
+> cmake -S . -B build/
+> ```
+- `-S .` means the source (and CMakeList.txt) is located in the current directory
+
+
+# Example 1: Creating a Project
+## Step 1: Prepare _main.cpp_
+https://github.com/komxun/CMake_Learn/blob/eee93c11c3e1c3c0eeef85ce9d187b555718d996/try_CMakeList/main.cpp#L1-L7
+## Step 2: Create _CMakeLists.txt_ and run `cmake`
+https://github.com/komxun/CMake_Learn/blob/6fd4b91af985269dec89747dabe3958784028529/try_CMakeList/CMakeLists.txt#L1-L3
+
+What are these lines?
+- `cmake_minimum(VERSION xxxxx)` is required
+- `project(projectName)` : Add project
+- `add_executable(programName source)` : Build the executable file
+
+> Linux Terminal
 > ```
 > cmake -S . -B obj/
 > ```
-- `-S .` means the source (and CMakeList.txt) is located in the current directory
+
+Result
+- _makefile_ is created along with other files
+![image](https://github.com/komxun/CMake_Learn/assets/133139057/1b9c5f6e-2120-434d-9c7e-6a225bd568ed)
+
+## Step 3: Run `make` and your program
+> Linux Terminal - at where the makefile is located
+> ```
+> make
+> ```
+
+
+
+Results
+
+![image](https://github.com/komxun/CMake_Learn/assets/133139057/31bf955b-f8ae-43ff-a1f2-c2898ca66935)
+
+
+
+![image](https://github.com/komxun/CMake_Learn/assets/133139057/02e7fa9d-0b5a-47b3-9390-09d6e52a5e12)
+
+Notes:
 ## Check CMake version
 > Linux terminal
 > ```
 > cmake --version
 > ```
 
-# Example 1 : Creating a Project
-> CMakeLists.txt
-> ```txt
-> cmake_minimum_required(VERSION 3.16.3)
-> project(myProject)
-> add_executable(${PROJECT_NAME} main.cpp)
-> ```
-
-> Linux Terminal - at where the makefile is located
-> ```
-> make
-> ```
-
-- `cmake_minimum(VERSION xxxxx)` is required
-- `project(projectName)` : Add project
-- `add_executable(programName source)` : Build the executable file
-
-Results
-
-![image](https://github.com/komxun/CMake_Learn/assets/133139057/31bf955b-f8ae-43ff-a1f2-c2898ca66935)
-
-![image](https://github.com/komxun/CMake_Learn/assets/133139057/1b9c5f6e-2120-434d-9c7e-6a225bd568ed)
-
-![image](https://github.com/komxun/CMake_Learn/assets/133139057/02e7fa9d-0b5a-47b3-9390-09d6e52a5e12)
-
 # Example 2 : 
-## Step 0 : Prepare _main.cpp_
-## Step 1 : Create _CMakeLists.txt_ and run `cmake`
+## Step 1 : Prepare _main.cpp_
+## Step 2 : Create _CMakeLists.txt_ and run `cmake`
 > CMakeLists.txt
 > ```
 > cmake_minimum_required(VERSION 3.16.3)
@@ -90,7 +109,7 @@ Results
 > install(TARGETS trim DESTINATION bin)
 > ```
 
-- `install(TARGETS programName DESTINATION xxx)` : specify where to install the executable file (your program), _bin_ is a standard place to install (usually _usr/local/bin/_)
+- `install(TARGETS targetName DESTINATION xxx)` : specify where to install the executable file (or library), _bin_ is a standard place to install (usually _usr/local/bin/_)
 - Usually, we create a separate folder for the built files (in this case, _build_)
 > Linux terminal
 > ```
@@ -103,11 +122,16 @@ Results
 - Now, in _build_, the _makefile_ is created and configured along with many other files
 ![image](https://github.com/komxun/CMake_Learn/assets/133139057/78b757e8-cc72-4d4f-9404-26a04be2fd80)
 
-## Step 2 : run `make` and your program
+## Step 3 : run `make` and your program
 ![image](https://github.com/komxun/CMake_Learn/assets/133139057/0910e4ff-34d9-438e-bb6f-658bf3c34f3f)
 
 
 Not sure what to `make`? type `make help`
 ![image](https://github.com/komxun/CMake_Learn/assets/133139057/e21a02a5-1b42-4679-ac1c-ec8f100eb8b5)
 
+# `install()` on CMakeLists.txt
+![image](https://github.com/komxun/CMake_Learn/assets/133139057/bbf25479-ac8e-471d-9ffc-78203ef27b75)
+
+Because we `install` the program on the _bin_ already, we can call this program ANYWHERE !! (Don't need to locate the program's directory anymore!)
+![image](https://github.com/komxun/CMake_Learn/assets/133139057/8910c358-f6b7-4167-88f8-cc21fc673f14)
 
