@@ -130,6 +130,11 @@ Not sure what to `make`? type `make help`
 ![image](https://github.com/komxun/CMake_Learn/assets/133139057/e21a02a5-1b42-4679-ac1c-ec8f100eb8b5)
 
 # `install()` on CMakeLists.txt
+Install the program, as specified in _CMakeLists.txt_
+> Linux terminal
+> ```
+> sudo make install
+> ```
 ![image](https://github.com/komxun/CMake_Learn/assets/133139057/bbf25479-ac8e-471d-9ffc-78203ef27b75)
 
 Because we `install` the program on the _bin_ already, we can call this program ANYWHERE !! (Don't need to locate the program's directory anymore!)
