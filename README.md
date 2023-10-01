@@ -27,6 +27,10 @@ You just need to type `make` in the terminal to execute the _makefile_ (compile 
 > ./out
 > ```
 
+Results
+![image](https://github.com/komxun/CMake_Learn/assets/133139057/41dd09e5-ab08-4d2f-b291-263b21a0b482)
+
+
 # CMakeLists.txt
 - CMake relies on a top-level file called `CMakeLists.txt' (exact spelling!)
 
