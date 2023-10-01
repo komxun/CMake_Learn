@@ -1,0 +1,3 @@
+/home/komsun/CMake_Learn/try_CMakeList/obj/CMakeFiles/rebuild_cache.dir
+/home/komsun/CMake_Learn/try_CMakeList/obj/CMakeFiles/edit_cache.dir
+/home/komsun/CMake_Learn/try_CMakeList/obj/CMakeFiles/myProject.dir
