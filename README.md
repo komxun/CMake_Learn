@@ -116,6 +116,7 @@ Notes:
 > cmake -S ..
 > ```
 - `-S ..` means the source (and CMakeLists.txt) is in the previous directory
+- no `-B` means the current directory is used for build
 
 ![image](https://github.com/komxun/CMake_Learn/assets/133139057/a272dd15-1615-472c-bc6a-715ae9e2d8e1)
 
