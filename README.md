@@ -16,14 +16,15 @@ My note from
 **Step 1:** Prepare `.h` and `.cpp` files for your library
 
 **Step 2:** Create _CMakeLists.txt_ and run `cmake`
+- Now, we use `add_library(libraryName file-to-compile)` to create library 
+> CMakeLists.txt
+> ```cpp
+> cmake_minimum_required(VERSION 3.16.3)
+> project(komsunmath_project)
+> add_library(komsunmath adder.cpp)
+> ```
 
 **Step 3:** Run `make`
-
-```cpp
-cmake_minimum_required(VERSION 3.16.3)
-project(komsunmath_project)
-add_library(komsunmath adder.cpp)
-```
 ![image](https://github.com/komxun/CMake_Learn/assets/133139057/6e1b9947-842a-48e5-b732-de152ad00f00)
 
 DONE!! - Your library has been built!
