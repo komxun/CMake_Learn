@@ -16,7 +16,7 @@ My note from
 **Step 1:** Prepare `.h` and `.cpp` files for your library
 
 **Step 2:** Create _CMakeLists.txt_ and run `cmake`
-- Now, we use `add_library(libraryName file-to-compile)` to create library 
+- Use `add_library(libraryName file-to-compile)` to create library 
 > CMakeLists.txt
 > ```cpp
 > cmake_minimum_required(VERSION 3.16.3)
