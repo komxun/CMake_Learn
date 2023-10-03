@@ -30,6 +30,7 @@ My note from
 DONE!! - Your library has been built!
 
 # Calling Libraries
+## Method 1: Directly locate the library's directory
 Step 1: Prepare _main.cpp_ and include your library with `#include`
 
 Step 2: Create _CMakeLists.txt_ and run `cmake`
