@@ -32,7 +32,7 @@ Results
 
 
 # CMakeLists.txt
-- CMake relies on a top-level file called `CMakeLists.txt' (exact spelling!)
+- CMake relies on a top-level file called _CMakeLists.txt_ (exact spelling!)
 
 Project Workflow \
 Step 1: Prepare your source file `main.cpp` \
