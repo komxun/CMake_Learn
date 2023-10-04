@@ -146,6 +146,13 @@ Not sure what to `make`? type `make help`
 ![image](https://github.com/komxun/CMake_Learn/assets/133139057/e21a02a5-1b42-4679-ac1c-ec8f100eb8b5)
 
 # `install()` on CMakeLists.txt
+> CMakeLists.txt
+> ```
+> cmake_minimum_required(VERSION 3.16.3)
+> project(Trim)
+> add_executable(trim main.cpp)
+> install(TARGETS trim DESTINATION bin)
+> ```
 Install the program, as specified in _CMakeLists.txt_
 > Linux terminal
 > ```
