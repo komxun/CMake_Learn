@@ -2,9 +2,20 @@
 
 My note from [CMake Tutorial](https://www.youtube.com/watch?v=nlKcXPUJGwA&list=PLalVdRk2RC6o5GHu618ARWh0VO0bFlif4&ab_channel=Code%2CTech%2CandTutorials)
 
-
-
 > [Episode 2](https://youtu.be/DDHCEE_PHOU?si=smf5akXYDzYQzykj) Summarized by Komsun Tamanakijprasart
+
+Table of contents
+=================
+
+<!--ts-->
+  * [Creating Libraries](#creating-libraries)
+  * [Calling Libraries](#calling-libraries)
+      * [Method 1: Directly locate the library's directory](#method-1-directly-locate-the-librarys-directory)
+      * [Method 2: Install the library](#method-2-install-the-library)
+      * [Installing the library](#install-the-library)
+      * [Calling the installed library](#calling-the-installed-library)
+
+<!--te-->
 
 # Creating Libraries
 - You don't need _main.cpp_ to create a library
