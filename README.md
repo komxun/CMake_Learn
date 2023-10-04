@@ -115,12 +115,13 @@ Notes:
 # Example 2: Installing your program
 ## Step 1 : Prepare _main.cpp_
 ## Step 2 : Create _CMakeLists.txt_ and run `cmake`
+
 > CMakeLists.txt
 > ```
 > cmake_minimum_required(VERSION 3.16.3)
 > project(Trim)
 > add_executable(trim main.cpp)
-> install(TARGETS trim DESTINATION bin)
+> install(TARGETS targetName DESTINATION bin)
 > ```
 
 What are these lines?
@@ -146,6 +147,10 @@ Not sure what to `make`? type `make help`
 ![image](https://github.com/komxun/CMake_Learn/assets/133139057/e21a02a5-1b42-4679-ac1c-ec8f100eb8b5)
 
 # `install()` on CMakeLists.txt
+```
+install(TARGETS <targetName> DESTINATION <destination>
+```
+Example:
 > CMakeLists.txt
 > ```
 > cmake_minimum_required(VERSION 3.16.3)
