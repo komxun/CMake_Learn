@@ -1,0 +1,2 @@
+/usr/bin/ar qc libkomsunmath2.a  CMakeFiles/komsunmath2.dir/multiplier.cpp.o
+/usr/bin/ranlib libkomsunmath2.a
