@@ -71,12 +71,18 @@ Step 3: Run `make`
 ## Step 1: Prepare _main.cpp_
 https://github.com/komxun/CMake_Learn/blob/eee93c11c3e1c3c0eeef85ce9d187b555718d996/try_CMakeList/main.cpp#L1-L7
 ## Step 2: Create _CMakeLists.txt_ and run `cmake`
-https://github.com/komxun/CMake_Learn/blob/6fd4b91af985269dec89747dabe3958784028529/try_CMakeList/CMakeLists.txt#L1-L3
+> CMakeLists.txt
+> ```
+> cmake_minimum_required(VERSION 3.16.3)
+> project(myProject)
+> add_executable(${PROJECT_NAME} main.cpp)
+> ```
 
 What are these lines?
-- `cmake_minimum(VERSION xxxxx)` is required
-- `project(projectName)` : Add project
+- `cmake_minimum(VERSION xxxxx)` : Minimum required version
+- `project(projectName)` : Add a project
 - `add_executable(programName source)` : Build the executable file
+- `${PROJECT_NAME}` : Built-in keyword to refer to the project name
 
 > Linux Terminal
 > ```
@@ -99,8 +105,6 @@ Results
 
 ![image](https://github.com/komxun/CMake_Learn/assets/133139057/31bf955b-f8ae-43ff-a1f2-c2898ca66935)
 
-
-
 ![image](https://github.com/komxun/CMake_Learn/assets/133139057/02e7fa9d-0b5a-47b3-9390-09d6e52a5e12)
 
 Notes:
@@ -121,6 +125,7 @@ Notes:
 > install(TARGETS trim DESTINATION bin)
 > ```
 
+What are these lines?
 - `install(TARGETS targetName DESTINATION xxx)` : specify where to install the executable file (or library), _bin_ is a standard place to install (usually _usr/local/bin/_)
 - Usually, we create a separate folder for the built files (in this case, _build_)
 > Linux terminal
