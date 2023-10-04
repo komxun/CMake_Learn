@@ -17,7 +17,7 @@ My note from
 
 **Step 2:** Create _CMakeLists.txt_ and run `cmake`
 - Use `add_library(libraryName file-to-compile)` to create library 
-> CMakeLists.txt 
+> CMakeLists.txt of the library
 > ```cpp
 > cmake_minimum_required(VERSION 3.16.3)
 > project(komsunmath_project)
@@ -35,7 +35,7 @@ DONE!! - Your library has been built!
 https://github.com/komxun/CMake_Learn/blob/82a00fb7680cde5473fc83b8374182dc085ef834/TestSomeLib/main.cpp#L1-L9
 
 **Step 2:** Create _CMakeLists.txt_ and run `cmake`
-> CMakeLists.txt
+> CMakeLists.txt of the main program
 > ```cpp
 > cmake_minimum_required(VERSION 3.13)
 > project(TestSomeLib)
@@ -87,8 +87,10 @@ The following table shows the target types with their associated variables and b
 Since the library has already been installed, we don't need to rely on `target_link_directories()` since Linux already knows the path
 
 **Step 1:** Prepare _main.cpp_ and include your library with `#include "libHeader.h"` (just the header, no need for the location!)
+https://github.com/komxun/CMake_Learn/blob/f32269758fa377a57920333eeeb08793c3f47d43/TestSomeLib2/main.cpp#L1-L9
 
 **Step 2:** Create _CMakeLists.txt_ and run `cmake`
+> CMakeLists.txt of the main program
 > ```cpp
 > cmake_minimum_required(VERSION 3.13)
 > project(TestSomeLib2)
