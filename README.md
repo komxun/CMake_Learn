@@ -4,8 +4,20 @@ My note from
 
 - [CMake Tutorial](https://www.youtube.com/watch?v=nlKcXPUJGwA&list=PLalVdRk2RC6o5GHu618ARWh0VO0bFlif4&ab_channel=Code%2CTech%2CandTutorials)
 
-
 > Summarized by Komsun Tamanakijprasart
+
+Table of contents
+=================
+
+<!--ts-->
+  * [makefile](#makefile)
+  * [CMakeLists](#cmakeliststxt)
+      * [`cmake`](#cmake)
+  * [Example 1: Creating a project](#example-1-creating-a-project)
+  * [Example 2: Installing your program](#example-2-installing-your-program)
+  * [`install()`](#install-on-cmakeliststxt)
+
+<!--te-->
 
 # makefile
 - Create and name a new file _makefile_ in your working directory
@@ -98,7 +110,7 @@ Notes:
 > cmake --version
 > ```
 
-# Example 2 : 
+# Example 2: Installing your program
 ## Step 1 : Prepare _main.cpp_
 ## Step 2 : Create _CMakeLists.txt_ and run `cmake`
 > CMakeLists.txt
