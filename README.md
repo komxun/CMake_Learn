@@ -48,3 +48,7 @@ Step 2: Create _CMakeLists.txt_ and run `cmake`
 - `target_link_libraries(targetName libName)`: link the library to the project, just need the library name
 - `${CMAKE_SOURCE_DIR}`: default keyword to locate the directory of _makefile_
 - [`target_link_directories()`](https://cmake.org/cmake/help/latest/command/target_link_directories.html) is firstly added to the CMake in version 3.13, so the `cmake_minimum_required()` should be this version
+
+## Method 2: Install the Library
+
+> If no type is given explicitly to the library the type is `STATIC` or `SHARED` based on whether the current value of the variable `BUILD_SHARE_LIBS` is `ON`
