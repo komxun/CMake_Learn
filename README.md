@@ -148,7 +148,7 @@ Not sure what to `make`? type `make help`
 
 # `install()` on CMakeLists.txt
 ```
-install(TARGETS <targetName> DESTINATION <destination>
+install(TARGETS <targetName> DESTINATION <destination>)
 ```
 Example:
 > CMakeLists.txt
