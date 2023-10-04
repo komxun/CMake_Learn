@@ -17,7 +17,7 @@ My note from
 
 **Step 2:** Create _CMakeLists.txt_ and run `cmake`
 - Use `add_library(libraryName file-to-compile)` to create library 
-> CMakeLists.txt
+> CMakeLists.txt 
 > ```cpp
 > cmake_minimum_required(VERSION 3.16.3)
 > project(komsunmath_project)
@@ -31,10 +31,10 @@ DONE!! - Your library has been built!
 
 # Calling Libraries
 ## Method 1: Directly locate the library's directory
-Step 1: Prepare _main.cpp_ and include your library with `#include`
+**Step 1:** Prepare _main.cpp_ and include your library with `#include "../location/libHeader.h"`
 https://github.com/komxun/CMake_Learn/blob/82a00fb7680cde5473fc83b8374182dc085ef834/TestSomeLib/main.cpp#L1-L9
 
-Step 2: Create _CMakeLists.txt_ and run `cmake`
+**Step 2:** Create _CMakeLists.txt_ and run `cmake`
 > CMakeLists.txt
 > ```cpp
 > cmake_minimum_required(VERSION 3.13)
@@ -49,6 +49,8 @@ Step 2: Create _CMakeLists.txt_ and run `cmake`
 - `${CMAKE_SOURCE_DIR}`: default keyword to locate the directory of _makefile_
 - [`target_link_directories()`](https://cmake.org/cmake/help/latest/command/target_link_directories.html) is firstly added to the CMake in version 3.13, so the `cmake_minimum_required()` should be this version
 
+**Step 3:** Run `make` and your program
+
 ## Method 2: Install the Library
 More detail about [`add_library(<target> [BEFORE]
   <INTERFACE|PUBLIC|PRIVATE> [items1...]
@@ -58,4 +60,44 @@ More detail about [`add_library(<target> [BEFORE]
 
 ![image](https://github.com/komxun/CMake_Learn/assets/133139057/d5e45d58-0639-4937-9703-61f193bed8d1)
 
+DONE! The library has been created and installed on your system (_lib_ folder)
+### Install the library
+> CMakeLists.txt of the library
+> ```
+> cmake_minimum_required(VERSION 2.8)
+> project(komsunmath2_project)
+> add_library(komsunmath2 multiplier.cpp)
+> set_target_properties(komsunmath2 PROPERTIES PUBLIC_HEADER multiplier.h)
+> install(TARGETS komsunmath2 LIBRARY DESTINATION lib
+> PUBLIC_HEADER DESTINATION include)
+> ```
+
+What are these lines?
+- `set_target_properties(<targetLib> PROPERTIES PUBLIC_HEADER <header_file>)` : You can set various properties for the library, the `PUBLIC_HEADER` has been set to _multiplier.h_ in this case
+- `install(... LIBRARY DESTINATION lib`) : Set the install location of the library, in this case: _lib_ folder
+- `install(... PUBLIC_HEADER DESTINATION include` : Set the location of the public header to look for, in this case: _include_ folder
+
+See more examples [here](https://cmake.org/cmake/help/latest/command/install.html#:~:text=Consider%20the%20following%20example%3A)
+
+The following table shows the target types with their associated variables and built-in defaults that apply when no destination is given (See [more info](https://cmake.org/cmake/help/latest/command/install.html#:~:text=The%20following%20table%20shows%20the%20target%20types%20with%20their%20associated%20variables%20and%20built%2Din%20defaults%20that%20apply%20when%20no%20destination%20is%20given%3A):
+![image](https://github.com/komxun/CMake_Learn/assets/133139057/ee384259-c9f5-4f9f-956e-1890420f75f8)
+
+
+### Calling the installed library
+Since the library has already been installed, we don't need to rely on `target_link_directories()` since Linux already knows the path
+
+**Step 1:** Prepare _main.cpp_ and include your library with `#include "libHeader.h"` (just the header, no need for the location!)
+
+**Step 2:** Create _CMakeLists.txt_ and run `cmake`
+> ```cpp
+> cmake_minimum_required(VERSION 3.13)
+> project(TestSomeLib2)
+> add_executable(TestSomeLib2 main.cpp)
+> target_link_libraries(TestSomeLib2 komsunmath2)
+> ```
+
+**Step 3:** Run `make` and your program
+
+Results
+![image](https://github.com/komxun/CMake_Learn/assets/133139057/35ca6506-6337-4b2a-afc9-0e755b2db610)
 
