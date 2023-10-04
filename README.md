@@ -50,5 +50,12 @@ Step 2: Create _CMakeLists.txt_ and run `cmake`
 - [`target_link_directories()`](https://cmake.org/cmake/help/latest/command/target_link_directories.html) is firstly added to the CMake in version 3.13, so the `cmake_minimum_required()` should be this version
 
 ## Method 2: Install the Library
+More detail about [`add_library(<target> [BEFORE]
+  <INTERFACE|PUBLIC|PRIVATE> [items1...]
+  [<INTERFACE|PUBLIC|PRIVATE> [items2...] ...])`](https://cmake.org/cmake/help/latest/command/add_library.html)
+  
+  "If no type is given explicitly to the library the type is `STATIC` or `SHARED` based on whether the current value of the variable `BUILD_SHARE_LIBS` is `ON` "
 
-> If no type is given explicitly to the library the type is `STATIC` or `SHARED` based on whether the current value of the variable `BUILD_SHARE_LIBS` is `ON`
+![image](https://github.com/komxun/CMake_Learn/assets/133139057/d5e45d58-0639-4937-9703-61f193bed8d1)
+
+
