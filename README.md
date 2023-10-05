@@ -23,7 +23,8 @@ Table of contents
 
 There are 135 changes in this case, but we don't need a lot of this stuff. Thus, use `git ignore` to ignore these files.
 
-## Step 0-2: Create _.gitignore_ file and fill with these commands (together)
+## Step 0-2: Create _.gitignore_ file
+Fill the _.gitignore_ file with these commands (together)
 - [gitignore for c++](https://github.com/github/gitignore/blob/main/C%2B%2B.gitignore)
 - [gitignore for cmake](https://github.com/github/gitignore/blob/main/CMake.gitignore)
 - Ignore the _build_ folder and anything called "build" with all capitalization combination:
