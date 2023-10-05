@@ -35,5 +35,8 @@ There are 135 changes in this case, but we don't need a lot of this stuff. Thus,
 
 `[Bb]` means ignore the capital B or lowercase b
 
+Now, click the **Refresh** button in the VSCode. The number of changes is now reduced to 12 changes.
+![image](https://github.com/komxun/CMake_Learn/assets/133139057/38f1abb3-d37d-4ca2-9e84-5282785241b2)
+
 
 
