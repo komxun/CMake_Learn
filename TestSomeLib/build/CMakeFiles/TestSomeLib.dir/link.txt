@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/TestSomeLib.dir/main.cpp.o  -o TestSomeLib   -L/home/komsun/CMake_Learn/TestSomeLib/../SomeLibDemo/build  -Wl,-rpath,/home/komsun/CMake_Learn/TestSomeLib/../SomeLibDemo/build -lkomsunmath 

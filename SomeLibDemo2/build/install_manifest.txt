@@ -1,2 +1,0 @@
-/usr/local/lib/libkomsunmath2.a
-/usr/local/include/multiplier.h

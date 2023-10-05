@@ -1,3 +1,0 @@
-/home/komsun/CMake_Learn/TestSomeLib2/build/CMakeFiles/rebuild_cache.dir
-/home/komsun/CMake_Learn/TestSomeLib2/build/CMakeFiles/edit_cache.dir
-/home/komsun/CMake_Learn/TestSomeLib2/build/CMakeFiles/TestSomeLib2.dir

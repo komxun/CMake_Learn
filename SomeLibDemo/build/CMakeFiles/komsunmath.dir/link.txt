@@ -1,2 +1,0 @@
-/usr/bin/ar qc libkomsunmath.a  CMakeFiles/komsunmath.dir/adder.cpp.o
-/usr/bin/ranlib libkomsunmath.a

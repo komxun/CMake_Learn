@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/TestSomeLib2.dir/main.cpp.o  -o TestSomeLib2  -lkomsunmath2 

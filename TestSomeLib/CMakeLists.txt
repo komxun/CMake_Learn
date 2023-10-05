@@ -1,5 +1,0 @@
-cmake_minimum_required(VERSION 3.13)
-project(TestSomeLib)
-add_executable(TestSomeLib main.cpp)
-target_link_directories(TestSomeLib PRIVATE ${CMAKE_SOURCE_DIR}/../SomeLibDemo/build)
-target_link_libraries(TestSomeLib komsunmath)

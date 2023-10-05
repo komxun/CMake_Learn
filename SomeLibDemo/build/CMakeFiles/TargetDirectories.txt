@@ -1,3 +1,0 @@
-/home/komsun/CMake_Learn/SomeLibDemo/build/CMakeFiles/rebuild_cache.dir
-/home/komsun/CMake_Learn/SomeLibDemo/build/CMakeFiles/edit_cache.dir
-/home/komsun/CMake_Learn/SomeLibDemo/build/CMakeFiles/komsunmath.dir
