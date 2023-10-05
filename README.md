@@ -42,6 +42,26 @@ Now, click the **Refresh** button in the VSCode. The number of changes is now re
 ## Step 0-3: `git commit` these changes
 
 
+## Step 1-1: Create a submodule with `git submodule add`
+> Linux or Windows Terminal
+> ```
+> git submodule add <repo directory>
+> ```
 
+Example: GLFW (https://github.com/glfw/glfw)
+
+"GLFW is an Open Source, multi-platform library for OpenGL, OpenGL ES and Vulkan application development. It provides a simple, platform-independent API for creating windows, contexts and surfaces, reading input, handling events, etc.
+
+GLFW natively supports Windows, macOS and Linux and other Unix-like systems. On Linux both X11 and Wayland are supported."
+
+> Linux or Windows Terminal
+> ```
+> git submodule add https://github.com/glfw/glfw.git external/glfw
+> ```
+
+This will clone the repo into a new folder _external/glfw_
+![image](https://github.com/komxun/CMake_Learn/assets/133139057/762417a6-a584-46eb-b2eb-2041d7ed6ef3)
+
+## Step 1-2: `git commit` this submodule addition
 
 
