@@ -113,3 +113,54 @@ https://github.com/komxun/CMake_Learn/blob/f32269758fa377a57920333eeeb08793c3f47
 Results
 ![image](https://github.com/komxun/CMake_Learn/assets/133139057/35ca6506-6337-4b2a-afc9-0e755b2db610)
 
+# Extra: Shortcutting terminal with `.sh` files
+Traditional method:
+1. `cmake -S <source-directory> -B <build-directory>`
+2. `make` at the _makefile_
+3. `./projectName`
+
+If the project has been changed, we have to run these 3 commands every time. We can pre-code these lines into the `.sh` files 
+
+Step 0: Initialize the `.sh` files and make them executable
+> Linux terminal
+>  ```
+>  touch configure.sh
+>  touch build.sh
+>  touch run.sh
+>  chmod +x configure.sh build.sh run.sh
+>  ```
+
+- `touch ` is a Linux command to create a file. You can also use VScode to create these files
+- `chmod +x ` make the files executable
+
+Step 1: Pre-code what you want to run in terminal into these `.sh` files
+> configure.sh
+> ```
+> #! /bin/sh
+> cmake -S TestSomeLib2 -B TestSomeLib2/build
+> ```
+> build.sh
+> ```
+>  #! /bin/sh
+> cd TestSomeLib2/build;
+> make
+> ```
+> run.sh
+> ```
+>  #! /bin/sh
+> cd TestSomeLib2/build;
+> ./TestSomeLib2
+> ```
+
+Step 2: Run these `.sh` files
+> Linux terminal
+> ```
+> ./configure.sh
+> ./build.sh
+> ./run.sh
+> ```
+
+![image](https://github.com/komxun/CMake_Learn/assets/133139057/b2cb7b89-b169-4847-826c-d7e2fbbc50d0)
+
+
+
